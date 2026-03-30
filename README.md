@@ -22,9 +22,9 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 
 ### Lab 1: Virtual Lab Setup & Configuration
 **Targets:** Metasploitable2 & Windows Server (QEMU/KVM Subnet `192.168.100.0/24`)
-* **Environment Provisioning:** Deployed core virtual machines and bound adapters to a custom, air-gapped "Isolated" network to ensure zero internet exposure.
-* **Connectivity Validation:** Verified network communication via IP configuration tools (`ifconfig`/`ip a`) and ICMP ping tests.
-* **Baseline Network Scanning:** Conducted an aggressive, full-port stealth SYN scan (`nmap -sS -p- -T4 -oA baseline_scan`) to map the topology.
+* **Environment Provisioning:** We deployed core virtual machines and bound adapters to a custom, air-gapped "Isolated" network to ensure zero internet exposure.
+* **Connectivity Validation:** We verified network communication via IP configuration tools (`ifconfig`/`ip a`) and ICMP ping tests.
+* **Baseline Network Scanning:** We conducted an aggressive, full-port stealth SYN scan (`nmap -sS -p- -T4 -oA baseline_scan`) to map the topology.
 
 ### Lab 2: Footprinting & Reconnaissance
 * **OSINT Limitations:** We documented the constraints of a strict air-gapped environment. 
@@ -43,7 +43,7 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 
 ### Lab 5 & 6: Web Application Penetration Testing
 **Target:** OWASP Juice Shop
-* **Directory Enumeration:** We esed `gobuster` to identify hidden Node.js routing patterns.
+* **Directory Enumeration:** We used `gobuster` to identify hidden Node.js routing patterns.
 * **SQL Injection:** We performed manual bypass (`' OR 1=1--`) and automated extraction via `sqlmap` against the backend SQLite database.
 * **Cross-Site Scripting (XSS):** We verified client-side vulnerabilities using custom XSS payloads.
 
