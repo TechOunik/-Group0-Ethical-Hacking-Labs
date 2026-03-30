@@ -1,0 +1,13 @@
+/api                 [31m (Status: 500)[0m [Size: 3017]
+/apis                [31m (Status: 500)[0m [Size: 3019]
+/assets              [36m (Status: 301)[0m [Size: 156][34m [--> /assets/][0m
+/ftp                 [32m (Status: 200)[0m [Size: 11317]
+/profile             [31m (Status: 500)[0m [Size: 1043]
+/promotion           [32m (Status: 200)[0m [Size: 6586]
+/redirect            [31m (Status: 500)[0m [Size: 3119]
+/rest                [31m (Status: 500)[0m [Size: 3019]
+/restaurants         [31m (Status: 500)[0m [Size: 3033]
+/restore             [31m (Status: 500)[0m [Size: 3025]
+/restored            [31m (Status: 500)[0m [Size: 3027]
+/restricted          [31m (Status: 500)[0m [Size: 3031]
+/robots.txt          [32m (Status: 200)[0m [Size: 28]
