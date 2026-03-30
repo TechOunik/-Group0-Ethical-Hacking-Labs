@@ -1,0 +1,10 @@
+# Nmap 7.95 scan initiated Sun Mar 15 21:20:50 2026 as: /usr/lib/nmap/nmap --privileged -sS -p- -T4 -oA baseline_scan 192.168.100.0/24
+Host: 192.168.100.1 ()	Status: Up
+Host: 192.168.100.1 ()	Ports: 53/open/tcp//domain///, 67/closed/tcp//dhcps///	Ignored State: filtered (65533)
+Host: 192.168.100.224 ()	Status: Up
+Host: 192.168.100.224 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/open/tcp//smtp///, 53/open/tcp//domain///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 512/open/tcp//exec///, 513/open/tcp//login///, 514/open/tcp//shell///, 1099/open/tcp//rmiregistry///, 1524/open/tcp//ingreslock///, 2049/open/tcp//nfs///, 2121/open/tcp//ccproxy-ftp///, 3306/open/tcp//mysql///, 3632/open/tcp//distccd///, 5432/open/tcp//postgresql///, 5900/open/tcp//vnc///, 6000/open/tcp//X11///, 6667/open/tcp//irc///, 6697/open/tcp//ircs-u///, 8009/open/tcp//ajp13///, 8180/open/tcp/////, 8787/open/tcp//msgsrvr///, 36637/open/tcp/////, 37180/open/tcp/////, 41773/open/tcp/////, 45536/open/tcp/////	Ignored State: closed (65505)
+Host: 192.168.100.249 (WIN-HEC5G8LAE70.network)	Status: Up
+Host: 192.168.100.249 (WIN-HEC5G8LAE70.network)	Ports: 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 5985/open/tcp//wsman///, 47001/open/tcp//winrm///, 49664/open/tcp/////, 49665/open/tcp/////, 49666/open/tcp/////, 49667/open/tcp/////, 49668/open/tcp/////, 49669/open/tcp/////	Ignored State: closed (65524)
+Host: 192.168.100.231 (kali.network)	Status: Up
+Host: 192.168.100.231 (kali.network)	Ports: 22/open/tcp//ssh///	Ignored State: closed (65534)
+# Nmap done at Sun Mar 15 21:23:52 2026 -- 256 IP addresses (4 hosts up) scanned in 182.29 seconds

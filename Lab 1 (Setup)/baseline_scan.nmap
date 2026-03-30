@@ -1,0 +1,69 @@
+# Nmap 7.95 scan initiated Sun Mar 15 21:20:50 2026 as: /usr/lib/nmap/nmap --privileged -sS -p- -T4 -oA baseline_scan 192.168.100.0/24
+Nmap scan report for 192.168.100.1
+Host is up (0.0046s latency).
+Not shown: 65533 filtered tcp ports (no-response)
+PORT   STATE  SERVICE
+53/tcp open   domain
+67/tcp closed dhcps
+MAC Address: 52:54:00:D6:9F:08 (QEMU virtual NIC)
+
+Nmap scan report for 192.168.100.224
+Host is up (0.033s latency).
+Not shown: 65505 closed tcp ports (reset)
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+23/tcp    open  telnet
+25/tcp    open  smtp
+53/tcp    open  domain
+80/tcp    open  http
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+512/tcp   open  exec
+513/tcp   open  login
+514/tcp   open  shell
+1099/tcp  open  rmiregistry
+1524/tcp  open  ingreslock
+2049/tcp  open  nfs
+2121/tcp  open  ccproxy-ftp
+3306/tcp  open  mysql
+3632/tcp  open  distccd
+5432/tcp  open  postgresql
+5900/tcp  open  vnc
+6000/tcp  open  X11
+6667/tcp  open  irc
+6697/tcp  open  ircs-u
+8009/tcp  open  ajp13
+8180/tcp  open  unknown
+8787/tcp  open  msgsrvr
+36637/tcp open  unknown
+37180/tcp open  unknown
+41773/tcp open  unknown
+45536/tcp open  unknown
+MAC Address: 52:54:00:08:05:48 (QEMU virtual NIC)
+
+Nmap scan report for WIN-HEC5G8LAE70.network (192.168.100.249)
+Host is up (0.0037s latency).
+Not shown: 65524 closed tcp ports (reset)
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+5985/tcp  open  wsman
+47001/tcp open  winrm
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  unknown
+49668/tcp open  unknown
+49669/tcp open  unknown
+MAC Address: 52:54:00:29:53:AA (QEMU virtual NIC)
+
+Nmap scan report for kali.network (192.168.100.231)
+Host is up (0.000049s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+# Nmap done at Sun Mar 15 21:23:52 2026 -- 256 IP addresses (4 hosts up) scanned in 182.29 seconds
