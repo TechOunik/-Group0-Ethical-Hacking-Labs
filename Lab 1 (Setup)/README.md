@@ -16,7 +16,6 @@ We provisioned our core infrastructure directly on the personal computers of our
 ## The Results (-Group0-Ethical-Hacking-Labs/Lab 1 (Setup)/baseline_scan.nmap)
 The lab environment was successfully built, isolated, and secured on our local hardware. The attacker machine identified and communicated with the targets, and we established a clean baseline of the local subnet for diffing against future state changes.
 
-![](./Images/1.%20Kali.png)
-![](./Images/2.%20Windows.png)
-![](./Images/3.%20Metasploitable.png)
-
+![](./Images/Kali.png)
+![](./Images/Windows.png)
+![](./Images/Metasploitable.png)
