@@ -13,9 +13,10 @@ We provisioned our core infrastructure directly on the personal computers of our
     * `-T4`: Aggressive timing template. Speeds up the scan, assuming we're on a fast, local network with no latency.
     * `-oA baseline_scan`: Outputs the results into all three major formats (.nmap, .xml, and .gnmap) using the base filename provided.
 
-## The Results
+## The Results (-Group0-Ethical-Hacking-Labs/Lab 1 (Setup)/baseline_scan.nmap)
 The lab environment was successfully built, isolated, and secured on our local hardware. The attacker machine identified and communicated with the targets, and we established a clean baseline of the local subnet for diffing against future state changes.
 
-
-![](./Images/5.%20server.png)
+![](./Images/1.%20Kali.png)
+![](./Images/2.%20Windows.png)
+![](./Images/3.%20Metasploitable.png)
 
