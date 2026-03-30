@@ -1,0 +1,344 @@
+Commands to analyze apk vulnerability on our vulnapp.apk
+
+
+
+apktool d vulnapp.apk -o vulnapp\_src
+
+grep -ir "password" vulnapp\_src/res/values/ (search for password)
+
+grep -ir "key" vulnapp\_src/res/values/ (search for api keys)
+
+
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ apktool d vulnapp.apk -o vulnapp\_src                                              
+
+Destination directory (/home/kali/vulnapp\_src) already exists. Use -f switch if you want to overwrite it.
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ apktool d vulnapp.apk -o vulnapp\_src -f
+
+I: Using Apktool 2.7.0-dirty on vulnapp.apk
+
+I: Loading resource table...
+
+I: Decoding AndroidManifest.xml with resources...
+
+I: Loading resource table from file: /home/kali/.local/share/apktool/framework/1.apk
+
+I: Regular manifest package...
+
+I: Decoding file-resources...
+
+I: Decoding values \*/\* XMLs...
+
+I: Baksmaling classes.dex...
+
+I: Copying assets and libs...
+
+I: Copying unknown files...
+
+I: Copying original files...
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ grep -ir "password" vulnapp\_src/res/values/
+
+vulnapp\_src/res/values/public.xml:    <public type="string" name="ids1\_password" id="0x7f06003a" />
+
+vulnapp\_src/res/values/strings.xml:    <string name="ids1\_password">Enter 3rd party service password</string>
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ grep -ir "key" vulnapp\_src/res/values/
+
+vulnapp\_src/res/values/public.xml:    <public type="attr" name="keylines" id="0x7f01003a" />
+
+vulnapp\_src/res/values/public.xml:    <public type="attr" name="layout\_keyline" id="0x7f01003e" />
+
+vulnapp\_src/res/values/public.xml:    <public type="drawable" name="abc\_menu\_hardkey\_panel\_mtrl\_mult" id="0x7f02002f" />
+
+vulnapp\_src/res/values/public.xml:    <public type="string" name="pkey" id="0x7f06004a" />
+
+vulnapp\_src/res/values/public.xml:    <public type="bool" name="abc\_config\_showMenuShortcutsWhenKeyboardPresent" id="0x7f070007" />
+
+vulnapp\_src/res/values/public.xml:    <public type="id" name="hcKey" id="0x7f0c007b" />
+
+vulnapp\_src/res/values/public.xml:    <public type="id" name="hc2Key" id="0x7f0c007e" />
+
+vulnapp\_src/res/values/styles.xml:        <item name="panelBackground">@drawable/abc\_menu\_hardkey\_panel\_mtrl\_mult</item>
+
+vulnapp\_src/res/values/styles.xml:        <item name="panelBackground">@drawable/abc\_menu\_hardkey\_panel\_mtrl\_mult</item>
+
+vulnapp\_src/res/values/strings.xml:    <string name="hardcode\_enter">Enter the vendor key</string>
+
+vulnapp\_src/res/values/strings.xml:    <string name="pkey">notespin</string>
+
+vulnapp\_src/res/values/bools.xml:    <bool name="abc\_config\_showMenuShortcutsWhenKeyboardPresent">false</bool>
+
+vulnapp\_src/res/values/attrs.xml:    <attr name="keylines" format="reference" />
+
+vulnapp\_src/res/values/attrs.xml:    <attr name="layout\_keyline" format="integer" />
+
+vulnapp\_src/res/values/ids.xml:    <item type="id" name="hcKey" />
+
+vulnapp\_src/res/values/ids.xml:    <item type="id" name="hc2Key" />
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ 
+
+
+
+
+
+To assess the vulnapp.apk deeply using Jadx
+
+
+
+**It didn't run initially, it threw the error below:**
+
+
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ jadx-gui vulnapp.apk \&
+
+\[4] 38113
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ INFO  - Checking for updates...
+
+INFO  - Update channel: STABLE, current version: 1.5.5
+
+ERROR - Jadx decompiler wrapper init error
+
+jadx.core.utils.exceptions.JadxRuntimeException: Failed to build hash for inputs
+
+&#x20;       at jadx.core.utils.files.FileUtils.buildInputsHash(FileUtils.java:514)
+
+&#x20;       at jadx.gui.cache.manager.CacheManager.buildProjectUniqName(CacheManager.java:180)
+
+&#x20;       at jadx.gui.cache.manager.CacheManager.buildCacheDir(CacheManager.java:115)
+
+&#x20;       at jadx.gui.cache.manager.CacheManager.getCacheDir(CacheManager.java:55)
+
+&#x20;       at jadx.gui.settings.JadxProject.resolveCachePath(JadxProject.java:216)
+
+&#x20;       at jadx.gui.settings.JadxProject.getCacheDir(JadxProject.java:205)
+
+&#x20;       at jadx.gui.JadxWrapper.initUsageCache(JadxWrapper.java:165)
+
+&#x20;       at jadx.gui.JadxWrapper.open(JadxWrapper.java:79)
+
+&#x20;       at jadx.gui.ui.MainWindow.lambda$loadFiles$6(MainWindow.java:568)
+
+&#x20;       at jadx.core.utils.tasks.TaskExecutor.wrapTask(TaskExecutor.java:198)
+
+&#x20;       at jadx.core.utils.tasks.TaskExecutor.runStages(TaskExecutor.java:173)
+
+&#x20;       at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+
+&#x20;       at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+
+&#x20;       at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Caused by: java.nio.file.NoSuchFileException: vulnapp.apk
+
+&#x20;       at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+
+&#x20;       at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+
+&#x20;       at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+
+&#x20;       at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+
+&#x20;       at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:171)
+
+&#x20;       at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+
+&#x20;       at java.base/java.nio.file.Files.readAttributes(Files.java:1854)
+
+&#x20;       at java.base/java.nio.file.Files.getLastModifiedTime(Files.java:2397)
+
+&#x20;       at jadx.core.utils.files.FileUtils.buildInputsHash(FileUtils.java:509)
+
+&#x20;       ... 13 common frames omitted
+
+ERROR - Task onFinish failed
+
+jadx.core.utils.exceptions.JadxRuntimeException: Decompiler not yet loaded
+
+&#x20;       at jadx.gui.JadxWrapper.getDecompiler(JadxWrapper.java:283)
+
+&#x20;       at jadx.gui.JadxWrapper.getClasses(JadxWrapper.java:198)
+
+&#x20;       at jadx.gui.ui.MainWindow.checkLoadedStatus(MainWindow.java:614)
+
+&#x20;       at jadx.gui.ui.MainWindow.lambda$loadFiles$7(MainWindow.java:584)
+
+&#x20;       at jadx.gui.jobs.SimpleTask.onFinish(SimpleTask.java:61)
+
+&#x20;       at jadx.gui.jobs.BackgroundExecutor.lambda$taskComplete$3(BackgroundExecutor.java:161)
+
+&#x20;       at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:308)
+
+&#x20;       at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+
+&#x20;       at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+
+&#x20;       at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+
+&#x20;       at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+
+&#x20;       at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+&#x20;       at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+
+&#x20;       at jadx.gui.ui.JadxEventQueue.dispatchEvent(JadxEventQueue.java:29)
+
+&#x20;       at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+
+&#x20;       at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+
+&#x20;       at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+
+&#x20;       at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+
+&#x20;       at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+
+&#x20;       at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+INFO  - No updates found
+
+
+
+
+
+**After specifying the full path to teh vulnapp.apk, it ran successfully**
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ jadx-gui /home/kali/vulnapp.apk \&
+
+\[5] 38580
+
+&#x20;                                                                                                                              
+
+┌──(kali㉿kali)-\[\~]
+
+└─$ INFO  - Checking for updates...
+
+INFO  - Update channel: STABLE, current version: 1.5.5
+
+INFO  - output directory: vulnapp
+
+INFO  - loading ...
+
+INFO  - No updates found
+
+INFO  - Loaded classes: 1791, methods: 14809, instructions: 296594
+
+INFO  - Resetting disk code cache, base dir: /home/kali/.cache/jadx/projects/vulnapp-53f672950678d906656cb23829114e82/code
+
+
+
+
+
+See screenshot of Jadx GUI Summary attached
+
+
+
+**SUMMARY**
+
+
+
+Input
+
+Files
+
+/home/kali/vulnapp.apk
+
+Code sources
+
+classes.dex
+
+Native libs
+
+Arch list: arm64-v8a, armeabi, armeabi-v7a, mips, mips64, x86, x86\_64
+
+Per arch count: arm64-v8a:1, armeabi-v7a:1, armeabi:1, mips64:1, mips:1, x86:1, x86\_64:1
+
+&#x20;
+
+Total count: 7
+
+lib/arm64-v8a/libdivajni.so
+
+lib/armeabi-v7a/libdivajni.so
+
+lib/armeabi/libdivajni.so
+
+lib/mips/libdivajni.so
+
+lib/mips64/libdivajni.so
+
+lib/x86/libdivajni.so
+
+lib/x86\_64/libdivajni.so
+
+Counts
+
+Classes: 1791
+
+Methods: 14809
+
+Fields: 9643
+
+Instructions: 296594 (units)
+
+Decompilation
+
+Top level classes: 651
+
+Not loaded: 651 (100.00%)
+
+Loaded: 0 (0.00%)
+
+Processed: 0 (0.00%)
+
+Code generated: 0 (0.00%)
+
+Issues
+
+Errors: 0
+
+Warnings: 0
+
+Nodes with errors: 0
+
+Nodes with warnings: 0
+
+Total nodes with issues: 0
+
+Methods with issues: 0
+
+Methods success rate: 100.00%
+
+&#x20;                                                                                                                              
+

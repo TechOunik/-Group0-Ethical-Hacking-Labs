@@ -1,0 +1,37 @@
+{
+  "projectVersion": 2,
+  "files": [
+    "vulnapp.apk"
+  ],
+  "treeExpansionsV2": [
+    "p:android.support.annotation",
+    "t:JInputs//JInputFiles"
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "android.support.annotation.AnimatorRes",
+      "subPath": "java",
+      "caret": 445,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    }
+  ],
+  "cacheDir": "/home/kali/.cache/jadx/projects/vulnapp-53f672950678d906656cb23829114e82",
+  "enableLiveReload": false,
+  "searchHistory": [],
+  "searchResourcesFilter": "$TEXT",
+  "searchResourcesSizeLimit": 0,
+  "pluginOptions": {}
+}

@@ -1,0 +1,63 @@
+                                                                                                                               
+┌──(kali㉿kali)-[~]
+└─$ wget https://raw.githubusercontent.com/aircrack-ng/aircrack-ng/master/test/wpa.cap
+--2026-03-30 05:15:47--  https://raw.githubusercontent.com/aircrack-ng/aircrack-ng/master/test/wpa.cap
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3236 (3.2K) [application/octet-stream]
+Saving to: ‘wpa.cap.1’
+
+wpa.cap.1                       100%[======================================================>]   3.16K  --.-KB/s    in 0.03s   
+
+2026-03-30 05:15:50 (100 KB/s) - ‘wpa.cap.1’ saved [3236/3236]
+
+                                                                                                                               
+┌──(kali㉿kali)-[~]
+└─$ sudo gzip -d /usr/share/wordlists/rockyou.txt.gz              
+[sudo] password for kali: 
+gzip: /usr/share/wordlists/rockyou.txt.gz: No such file or directory
+                                                                                                                               
+┌──(kali㉿kali)-[~]
+└─$ aircrack-ng wpa.cap -w /usr/share/wordlists/rockyou.txt                           
+Reading packets, please wait...
+Opening wpa.cap
+Read 13 packets.
+
+   #  BSSID              ESSID                     Encryption
+
+   1  00:0D:93:EB:B0:8C  test                      WPA (1 handshake)
+
+Choosing first network as target.
+
+Reading packets, please wait...
+Opening wpa.cap
+Read 13 packets.
+
+1 potential targets
+
+
+                               Aircrack-ng 1.7 
+
+      [00:02:16] 145451/14344392 keys tested (1085.17 k/s) 
+
+      Time left: 3 hours, 38 minutes, 4 seconds                  1.01%
+
+                           KEY FOUND! [ biscotte ]
+
+
+      Master Key     : 5A C3 36 F7 09 C1 75 DF 0B 53 A3 FB 2C B4 F0 43 
+                       7B 4A E2 34 67 E4 FD A3 4D BC 52 18 F6 C9 57 C6 
+
+      Transient Key  : 19 EC AC DB DE 69 48 A4 D0 5F 2D C3 27 36 23 80 
+                       1B 99 1C 1D 92 37 97 78 B2 1A 74 25 8D FF 2B 2A 
+                       C5 E4 61 D6 90 91 B1 2D 15 E9 5C 2C E6 77 87 38 
+                       97 08 ED 66 D9 3D A8 FC C8 F0 32 8D 7B A9 F8 7F 
+
+      EAPOL HMAC     : 55 38 75 07 C5 1E 07 6F 09 8A 3C A7 E1 5F 07 B9 
+
+
+                                                                                                                               
+┌──(kali㉿kali)-[~]
+└─$ 
+
