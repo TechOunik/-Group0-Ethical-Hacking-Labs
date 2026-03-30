@@ -2,12 +2,12 @@
 
 Welcome to the official repository for **Group 0**. This workspace serves as a collaborative archive of penetration testing laboratory exercises, network traffic analysis, and exploit demonstrations completed as part of our Cybersecurity curriculum at Miva Open University.
 
-## 🚀 Repository Overview
+## Repository Overview
 This repository contains the artifacts, packet captures (PCAPs), scripts, and documentation generated during our hands-on offensive security labs. All attacks were executed within a safely isolated QEMU/KVM virtualization environment utilizing Kali Linux and intentionally vulnerable target machines.
 
 ---
 
-## 🛠️ Technical Stack & Tools
+## Technical Stack & Tools
 | Category | Tools Utilized |
 | :--- | :--- |
 | **Recon & Scanning** | Nmap, Masscan, Gobuster, Nikto, Dig, Whois |
@@ -18,7 +18,7 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 
 ---
 
-## 🧪 Lab Modules & Executed Tasks
+## Lab Modules & Executed Tasks
 
 ### Lab 1: Virtual Lab Setup & Configuration
 **Targets:** Metasploitable2 & Windows Server (QEMU/KVM Subnet `192.168.100.0/24`)
