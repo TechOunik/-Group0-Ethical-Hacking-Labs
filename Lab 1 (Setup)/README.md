@@ -17,5 +17,6 @@ We provisioned our core infrastructure directly on the personal computers of our
 The lab environment was successfully built, isolated, and secured on our local hardware. The attacker machine identified and communicated with the targets, and we established a clean baseline of the local subnet for diffing against future state changes.
 
 ![](./Images/Kali.png)
-![](./Images/Windows.png)
 ![](./Images/Metasploitable.png)
+![](./Images/Windows.png)
+
