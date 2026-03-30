@@ -27,34 +27,34 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 * **Baseline Network Scanning:** Conducted an aggressive, full-port stealth SYN scan (`nmap -sS -p- -T4 -oA baseline_scan`) to map the topology.
 
 ### Lab 2: Footprinting & Reconnaissance
-* **OSINT Limitations:** Documented the constraints of a strict air-gapped environment. 
-* **Active Scanning:** Executed an aggressive 65,535 port scan (`-sV -O`). 
-* **Web Vulnerability Scanning:** Targeted the functional web server using Nikto to extract HTTP flaws.
+* **OSINT Limitations:** We documented the constraints of a strict air-gapped environment. 
+* **Active Scanning:** We executed an aggressive 65,535 port scan (`-sV -O`). 
+* **Web Vulnerability Scanning:** We targeted the functional web server using Nikto to extract HTTP flaws.
 
 ### Lab 3: Network Scanning & Enumeration
-* **Rapid Port Sweeping:** Utilized `masscan` for rapid identification of open TCP ports across the subnet.
-* **SMB & RPC Enumeration:** Triggered NSE scripts (`--script smb-enum*`) to extract exposed file shares and user account data.
+* **Rapid Port Sweeping:** We utilized `masscan` for rapid identification of open TCP ports across the subnet.
+* **SMB & RPC Enumeration:** We triggered NSE scripts (`--script smb-enum*`) to extract exposed file shares and user account data.
 
 ### Lab 4: Exploitation & Post-Exploitation
 **Target:** vsftpd v2.3.4 (CVE-2011-2523)
-* **Exploitation:** Deployed Metasploit to trigger the known backdoor and bind a shell on TCP Port 6200.
-* **Post-Exploitation:** Upgraded to an interactive TTY via Python and gathered system evidence (`uname -a`, `cat /etc/passwd`).
-* **Privilege Escalation:** Verified root access via `sudo -l`.
+* **Exploitation:** We deployed Metasploit to trigger the known backdoor and bind a shell on TCP Port 6200.
+* **Post-Exploitation:** We upgraded to an interactive TTY via Python and gathered system evidence (`uname -a`, `cat /etc/passwd`).
+* **Privilege Escalation:** We verified root access via `sudo -l`.
 
 ### Lab 5 & 6: Web Application Penetration Testing
 **Target:** OWASP Juice Shop
-* **Directory Enumeration:** Used `gobuster` to identify hidden Node.js routing patterns.
-* **SQL Injection:** Performed manual bypass (`' OR 1=1--`) and automated extraction via `sqlmap` against the backend SQLite database.
-* **Cross-Site Scripting (XSS):** Verified client-side vulnerabilities using custom XSS payloads.
+* **Directory Enumeration:** We esed `gobuster` to identify hidden Node.js routing patterns.
+* **SQL Injection:** We performed manual bypass (`' OR 1=1--`) and automated extraction via `sqlmap` against the backend SQLite database.
+* **Cross-Site Scripting (XSS):** We verified client-side vulnerabilities using custom XSS payloads.
 
 ### Lab 7: Wireless & Mobile Security
-* **WPA2 Cracking:** Executed an offline dictionary attack using `aircrack-ng` and `rockyou.txt` against a captured EAPOL handshake.
-* **Mobile Analysis:** Decompiled the DIVA Android application using `apktool` and performed static analysis to find hardcoded API keys.
+* **WPA2 Cracking:** We executed an offline dictionary attack using `aircrack-ng` and `rockyou.txt` against a captured EAPOL handshake.
+* **Mobile Analysis:** We decompiled the DIVA Android application using `apktool` and performed static analysis to find hardcoded API keys.
 
 ### Lab 8: Evasion, IDS Bypass & DDoS
-* **IDS Evasion:** Implemented packet fragmentation (`nmap --mtu 24`) to bypass signature-based detection.
-* **Custom Packet Crafting:** Utilized Python's `Scapy` library to manually forge TCP SYN packets.
-* **DDoS Simulation:** Executed a `slowloris` attack against port 80 to demonstrate application-layer denial of service.
+* **IDS Evasion:** We Implemented packet fragmentation (`nmap --mtu 24`) to bypass signature-based detection.
+* **Custom Packet Crafting:** We utilized Python's `Scapy` library to manually forge TCP SYN packets.
+* **DDoS Simulation:** We executed a `slowloris` attack against port 80 to demonstrate application-layer denial of service.
 
 ---
 
