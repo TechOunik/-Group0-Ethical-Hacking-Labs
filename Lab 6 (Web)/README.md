@@ -33,3 +33,5 @@ We completely compromised the web application's backend infrastructure. We succe
 ![](./Images/gobuster.png)
 ![](./Images/curl.png)
 
+> **Note:** Full console output and command results have been logged to `gobuster.txt` for reference.
+

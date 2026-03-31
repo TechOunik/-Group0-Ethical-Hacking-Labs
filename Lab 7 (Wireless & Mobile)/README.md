@@ -17,6 +17,7 @@ Running QEMU virtualized environments locally on our PCs abstracts the host Wi-F
 ## The Results
 We successfully executed an offline dictionary attack to recover the WPA2 key. Moving to mobile, we successfully decompiled the Android application and extracted sensitive developer credentials that were hardcoded in plain text in the app's XML files.
 
-![](./Images/5.%20server.png)
+![](./Images/aircrack.png)
+![](./Images/jadx.png)
 
 > **Note:** Full console output and command results have been logged to `Lab7A.txt` and `Lab7B.txt`for reference.
