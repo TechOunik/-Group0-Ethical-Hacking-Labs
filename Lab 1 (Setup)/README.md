@@ -20,12 +20,15 @@ We provisioned our core infrastructure directly on the personal computers of our
 ## The Results (-Group0-Ethical-Hacking-Labs/Lab 1 (Setup)/baseline_scan.nmap)
 The lab environment was successfully built, isolated, and secured on our local hardware. The attacker machine identified and communicated with the targets, and we established a clean baseline of the local subnet for diffing against future state changes.
 
+### 1. Kali IP Configuration
 ![Kali IP Configuration](./Images/Kali.png)
 *Figure 1: Kali Linux interface configuration showing local subnet allocation with no external routing.*
 
+### 2. Metasploitable IP Configuration
 ![Metasploitable IP Configuration](./Images/Metasploitable.png)
 *Figure 2: Metasploitable2 interface configuration confirming internal routing only.*
 
+### 3. Windows IP Configuration
 ![Windows IP Configuration](./Images/Windows.png)
 *Figure 3: Windows Server ipconfig output explicitly showing a blank Default Gateway, validating the isolated network state.*
 
