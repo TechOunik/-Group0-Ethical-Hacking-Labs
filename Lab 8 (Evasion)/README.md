@@ -24,7 +24,12 @@ We ran a background capture to generate an evidentiary artifact while testing ev
 ## The Results
 We successfully simulated advanced network evasion and manual packet forging. We executed a resource-exhaustion DoS attack without flooding our local host networks, and converted the raw pcap data into readable text summaries to validate our methodology.
 
-![](./Images/scapy.png)
-![](./Images/slowloris.png)
+### 1. Manual Packet Forging (Scapy)
+![Scapy Packet Forging](./Images/scapy.png)
+*Figure 1: Interactive Scapy session demonstrating the manual, layer-by-layer construction and transmission of a custom TCP SYN packet to evade standard detection signatures.*
+
+### 2. Application-Layer DoS Simulation
+![Slowloris Execution](./Images/slowloris.png)
+*Figure 2: Executing Slowloris against the target web server. This simulates a resource-exhaustion attack by opening and holding hundreds of connections, effectively denying service without a massive flood of traffic.*
 
 > **Note:** Full command results have been logged to `Group0readable_capture.txt` for reference.
