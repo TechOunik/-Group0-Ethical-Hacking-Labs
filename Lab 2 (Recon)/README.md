@@ -18,5 +18,11 @@ In a standard engagement, we’d start with passive OSINT. But because our local
 ## The Results
 We mapped out the target's basic services and successfully identified potential web vulnerabilities despite the initial local virtualization issues. We took this intelligence and built an accurate visual map of the local attack surface.
 
-![](./Images/5.%20server.png)
-
+![](./Images/Whois.png)
+![](./Images/Whois2.png)
+![](./Images/nmap1.png)
+![](./Images/nmap2.png)
+![](./Images/nmap3.png)
+![](./Images/nikto_output1.png)
+![](./Images/nikto_output2.png)
+![](./Images/nikto_output3.png)
