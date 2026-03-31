@@ -17,7 +17,12 @@ Running QEMU virtualized environments locally on our PCs abstracts the host Wi-F
 ## The Results
 We successfully executed an offline dictionary attack to recover the WPA2 key. Moving to mobile, we successfully decompiled the Android application and extracted sensitive developer credentials that were hardcoded in plain text in the app's XML files.
 
-![](./Images/aircrack.png)
-![](./Images/jadx.png)
+### 1. Wireless Network Cracking
+![Aircrack-ng Execution](./Images/aircrack.png)
+*Figure 1: Executing an offline dictionary attack against an intercepted WPA handshake using Aircrack-ng to recover the pre-shared key (PSK).*
+
+### 2. Mobile Application Reverse Engineering
+![JADX APK Decompilation](./Images/jadx.png)
+*Figure 2: Utilizing JADX-GUI to decompile the target Android application, allowing us to statically analyze the internal Java source code and hunt for hardcoded credentials or insecure logic.*
 
 > **Note:** Full console output and command results have been logged to `Lab7A.txt` and `Lab7B.txt`for reference.
