@@ -18,6 +18,27 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 
 ---
 
+## Group 0 Team Members
+
+| S/N | Name | Matriculation Number | Contact Email |
+| :---: | :--- | :--- | :--- |
+| **1** | Ahmed Madugu Zakari | 2024/A/CYB/0080 | ahmed.zakari@miva.edu.ng |
+| **2** | Saddiq Musa Adam | 2024/A/CYB/0154 | Saddiq.musa@miva.edu.ng |
+| **3** | Jonathan Favour Chisom | 2024/A/CYB/0132 | favour.jonathan@miva.edu.ng |
+| **4** | Obioma Felicity Igwe | 2023/B/SENG/0226 | obiomafelicityigwe@gmail.com |
+| **5** | Ajayi Oyebanke Abiodun | 2024/C/CYB/0928 | oyebanke.ajayi@miva.edu.ng |
+| **6** | Abdulsalam Usman | 2024/A/CYB/0138 | usman.abdulsalam@miva.edu.ng |
+| **7** | Oluwadurotimi Bajomo | 2024/C/CYB/0973 | oluwadurotimi.bajomo@miva.edu.ng |
+| **8** | Babatunde Kelvin Ifeoluwa | 2023/A/CYB/0055 | kelvin.babatunde@miva.edu.ng |
+| **9** | Ikechukwu Francis Nwadialo | 2023/B/CYB/0213 | frankfort4u2020@gmail.com |
+| **10** | Joseph Oluwatimilehin Ambali | 2023/B/CYB/0113 | joseph.ambali@miva.edu.ng |
+| **11** | Onuawuchi Christian Chinonso | 2023/B/CYB/0206 | christian.onuawuchi@miva.edu.ng |
+| **12** | Samuel Ezedi | 2023/B/CYB/0217 | Samuel.ezedi@miva.edu.ng |
+| **13** | Covenant Maeba | 2023/B/CYB/0236 | Covenant.maeba@miva.edu.ng |
+| **14** | Agukwe Confidence Chidera | 2023/B/CYB/0120 | Confidence.agukwe@miva.edu.ng |
+
+---
+
 ## Lab Modules & Executed Tasks
 
 ### Lab 1: Virtual Lab Setup & Configuration
@@ -60,27 +81,6 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 * **IDS Evasion:** We Implemented packet fragmentation (`nmap --mtu 24`) to bypass signature-based detection.
 * **Custom Packet Crafting:** We utilized Python's `Scapy` library to manually forge TCP SYN packets.
 * **DDoS Simulation:** We executed a `slowloris` attack against port 80 to demonstrate application-layer denial of service.
-
----
-
-## Group 0 Team Members
-
-| S/N | Name | Matriculation Number | Contact Email |
-| :---: | :--- | :--- | :--- |
-| **1** | Ahmed Madugu Zakari | 2024/A/CYB/0080 | ahmed.zakari@miva.edu.ng |
-| **2** | Saddiq Musa Adam | 2024/A/CYB/0154 | Saddiq.musa@miva.edu.ng |
-| **3** | Jonathan Favour Chisom | 2024/A/CYB/0132 | favour.jonathan@miva.edu.ng |
-| **4** | Obioma Felicity Igwe | 2023/B/SENG/0226 | obiomafelicityigwe@gmail.com |
-| **5** | Ajayi Oyebanke Abiodun | 2024/C/CYB/0928 | oyebanke.ajayi@miva.edu.ng |
-| **6** | Abdulsalam Usman | 2024/A/CYB/0138 | usman.abdulsalam@miva.edu.ng |
-| **7** | Oluwadurotimi Bajomo | 2024/C/CYB/0973 | oluwadurotimi.bajomo@miva.edu.ng |
-| **8** | Babatunde Kelvin Ifeoluwa | 2023/A/CYB/0055 | kelvin.babatunde@miva.edu.ng |
-| **9** | Ikechukwu Francis Nwadialo | 2023/B/CYB/0213 | frankfort4u2020@gmail.com |
-| **10** | Joseph Oluwatimilehin Ambali | 2023/B/CYB/0113 | joseph.ambali@miva.edu.ng |
-| **11** | Onuawuchi Christian Chinonso | 2023/B/CYB/0206 | christian.onuawuchi@miva.edu.ng |
-| **12** | Samuel Ezedi | 2023/B/CYB/0217 | Samuel.ezedi@miva.edu.ng |
-| **13** | Covenant Maeba | 2023/B/CYB/0236 | Covenant.maeba@miva.edu.ng |
-| **14** | Agukwe Confidence Chidera | 2023/B/CYB/0120 | Confidence.agukwe@miva.edu.ng |
 
 ---
 **⚠️ Legal & Ethical Disclaimer:** *All tools, techniques, and artifacts documented in this repository are for educational purposes only. All attacks were conducted within a closed, authorized laboratory environment. The contributors assume no liability and are not responsible for any misuse or damage caused by this information.*
