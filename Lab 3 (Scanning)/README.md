@@ -11,9 +11,16 @@ We initiated this phase with a rapid TCP sweep to grab a quick baseline of avail
     * `-oG`: Outputs results in a greppable format for easy parsing.
 * `nmap -p 1-65535 -sS -sV --script smb-enum* -oA smb_enum 192.168.100.x`
     * `--script smb-enum*`: Instructs Nmap to run all Lua scripts matching the "smb-enum" wildcard pattern to aggressively enumerate Samba data.
+* `enum4linux -a 192.168.100.x`
+    * `-a`: Do "All" simple enumeration. This is a macro flag that automatically runs a full suite of checks including: extracting userlists (`-U`), enumerating shares (`-S`), grabbing password policies (`-P`), and checking for OS information (`-o`) via null sessions.
 
 ## The Results
-We successfully extracted user accounts, underlying RPC data, and open shares from the target's Samba service. We cross-referenced the discovered software versions against known CVEs to define our exact paths for exploitation.
+We successfully extracted user accounts, underlying RPC data, and open shares from the target's Samba service. By utilizing `enum4linux`, we confirmed the target allowed anonymous null sessions, which dumped the internal user list and password policy. We cross-referenced the discovered software versions and misconfigurations against known CVEs to define our exact paths for exploitation.
 
-![](./Images/5.%20server.png)
-
+![](./Images/enum4linux.png)
+![](./Images/masscan.png)
+![](./Images/nmap_smb_enum1.png)
+![](./Images/nmap_smb_enum2.png)
+![](./Images/nmap_smb_enum3.png)
+![](./Images/nmap_smb_enum4.png)
+![](./Images/nmap_smb_enum5.png)
