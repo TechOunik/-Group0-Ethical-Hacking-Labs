@@ -19,3 +19,4 @@ We successfully executed an offline dictionary attack to recover the WPA2 key. M
 
 ![](./Images/5.%20server.png)
 
+> **Note:** Full console output and command results have been logged to `Lab7A.txt` and `Lab7B.txt`for reference.

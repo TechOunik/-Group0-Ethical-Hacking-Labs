@@ -26,3 +26,5 @@ We successfully validated the vulnerability, automated the exploit delivery to b
 * **Access Control:** Implement strict host-based firewall rules (iptables/ufw) to drop external connections to the backdoor's bind port (TCP 6200) and restrict Port 21 to trusted internal IPs.
 
 ![](./Images/msf_console.png)
+
+> **Note:** Full console output and command results have been logged to `Lab4.txt` for reference.
