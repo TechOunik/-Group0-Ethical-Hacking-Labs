@@ -30,6 +30,6 @@ For deeper data extraction, standard payloads against the backend search API kep
 ## The Results
 We completely compromised the web application's backend infrastructure. We successfully mapped the API, bypassed authentication by manually crafting malicious web requests, dumped sensitive tables from the SQLite database, and proved client-side execution via Cross-Site Scripting (XSS).
 
-
-![](./Images/5.%20server.png)
+![](./Images/gobuster.png)
+![](./Images/curl.png)
 
