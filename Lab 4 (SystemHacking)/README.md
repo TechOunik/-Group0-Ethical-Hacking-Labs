@@ -21,7 +21,4 @@ We bypassed authentication entirely and secured a stable root shell. In a produc
 * **Access Control:** Implement strict host-based firewall rules (iptables/ufw) to drop external connections to the backdoor's bind port (TCP 6200) and restrict Port 21 to trusted internal IPs.
 
 
-
-
-![](./Images/5.%20server.png)
-
+![](./Images/enum4linux.png)
