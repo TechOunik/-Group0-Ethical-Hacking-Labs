@@ -18,7 +18,7 @@ Running QEMU virtualized environments locally on our PCs abstracts the host Wi-F
 We successfully executed an offline dictionary attack to recover the WPA2 key. Moving to mobile, we successfully decompiled the Android application and extracted sensitive developer credentials that were hardcoded in plain text in the app's XML files.
 
 ### 1. Wireless Network Cracking
-![Aircrack-ng Execution](./Images/aircrack.png)
+![Aircrack-ng Execution](./Images/aircrack.png) 
 *Figure 1: Executing an offline dictionary attack against an intercepted WPA handshake using Aircrack-ng to recover the pre-shared key (PSK).*
 
 ### 2. Mobile Application Reverse Engineering
