@@ -19,6 +19,7 @@ We successfully executed an offline dictionary attack to recover the WPA2 key. M
 
 ### 1. Wireless Network Cracking
 ![Aircrack-ng Execution](./Images/aircrack.png) 
+
 *Figure 1: Executing an offline dictionary attack against an intercepted WPA handshake using Aircrack-ng to recover the pre-shared key (PSK).*
 
 ### 2. Mobile Application Reverse Engineering
