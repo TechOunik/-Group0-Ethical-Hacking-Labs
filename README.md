@@ -41,11 +41,16 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 * **Post-Exploitation:** We upgraded to an interactive TTY via Python and gathered system evidence (`uname -a`, `cat /etc/passwd`).
 * **Privilege Escalation:** We verified root access via `sudo -l`.
 
-### Lab 5 & 6: Web Application Penetration Testing
-**Target:** OWASP Juice Shop
-* **Directory Enumeration:** We used `gobuster` to identify hidden Node.js routing patterns.
-* **SQL Injection:** We performed manual bypass (`' OR 1=1--`) and automated extraction via `sqlmap` against the backend SQLite database.
-* **Cross-Site Scripting (XSS):** We verified client-side vulnerabilities using custom XSS payloads.
+### Lab 5: Malware Analysis & Reverse Engineering
+**Target:** Simulated Custom Binary (`group0.bin`)
+* **Static Analysis:** We extracted hardcoded IOCs and headers using `file`, `strings`, and `readelf`, and utilized Ghidra for decompilation.
+* **Dynamic Analysis:** We safely detonated the binary in our air-gapped setup, using `strace` to track child processes and `tcpdump` to capture simulated C2 network traffic for defense rule creation.
+
+### Lab 6: Web Application Hacking
+**Target:** OWASP Juice Shop (127.0.0.1)
+* **API & Directory Enumeration:** We used `gobuster` to identify hidden routing patterns and backend API endpoints.
+* **SQL Injection:** We performed manual authentication bypass using `curl` (`' OR 1=1 --`) and automated data extraction via `sqlmap` against the backend SQLite database.
+* **Cross-Site Scripting (XSS):** We verified client-side vulnerabilities by injecting custom XSS payloads to pop browser alerts.
 
 ### Lab 7: Wireless & Mobile Security
 * **WPA2 Cracking:** We executed an offline dictionary attack using `aircrack-ng` and `rockyou.txt` against a captured EAPOL handshake.
