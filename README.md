@@ -79,6 +79,8 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 | **10** | Joseph Oluwatimilehin Ambali | 2023/B/CYB/0113 | joseph.ambali@miva.edu.ng |
 | **11** | Onuawuchi Christian Chinonso | 2023/B/CYB/0206 | christian.onuawuchi@miva.edu.ng |
 | **12** | Samuel Ezedi | 2023/B/CYB/0217 | Samuel.ezedi@miva.edu.ng |
+| **13** | Covenant Maeba | 2023/B/CYB/0236 | Covenant.maeba@miva.edu.ng |
+| **14** | Agukwe Confidence Chidera | 2023/B/CYB/0120 | Confidence.agukwe@miva.edu.ng |
 
 ---
 **⚠️ Legal & Ethical Disclaimer:** *All tools, techniques, and artifacts documented in this repository are for educational purposes only. All attacks were conducted within a closed, authorized laboratory environment. The contributors assume no liability and are not responsible for any misuse or damage caused by this information.*
