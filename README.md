@@ -43,7 +43,7 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 
 ### Lab 5: Malware Analysis & Reverse Engineering
 **Target:** Simulated Custom Binary (`group0.bin`)
-* **Static Analysis:** We extracted hardcoded IOCs and headers using `file`, `strings`, and `readelf`, and utilized Ghidra for decompilation.
+* **Static Analysis:** We extracted hardcoded IOCs and internal headers using `file`, `strings`, and `readelf`. We then launched the Ghidra GUI (`ghidraRun &`) as a background process to decompile the binary and reverse-engineer the underlying C code.
 * **Dynamic Analysis:** We safely detonated the binary in our air-gapped setup, using `strace` to track child processes and `tcpdump` to capture simulated C2 network traffic for defense rule creation.
 
 ### Lab 6: Web Application Hacking
