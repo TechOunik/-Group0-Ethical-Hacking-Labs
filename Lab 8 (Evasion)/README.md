@@ -20,5 +20,7 @@ We ran a background capture to generate an evidentiary artifact while testing ev
 ## The Results
 We successfully simulated advanced network evasion and manual packet forging. We executed a resource-exhaustion DoS attack without flooding our local host networks, and converted the raw pcap data into readable text summaries to validate our methodology.
 
-![](./Images/5.%20server.png)
+![](./Images/scapy.png)
+![](./Images/slowloris.png)
 
+> **Note:** Full command results have been logged to `Group0readable_capture.txt` for reference.
