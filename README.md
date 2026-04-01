@@ -25,12 +25,12 @@ This repository contains the artifacts, packet captures (PCAPs), scripts, and do
 | **1** | Ahmed Madugu Zakari | 2024/A/CYB/0080 | ahmed.zakari@miva.edu.ng |
 | **2** | Saddiq Musa Adam | 2024/A/CYB/0154 | Saddiq.musa@miva.edu.ng |
 | **3** | Jonathan Favour Chisom | 2024/A/CYB/0132 | favour.jonathan@miva.edu.ng |
-| **4** | Obioma Felicity Igwe | 2023/B/SENG/0226 | obiomafelicityigwe@gmail.com |
+| **4** | Obioma Felicity Igwe | 2023/B/SENG/0226 | obioma.igwe@miva.edu.ng |
 | **5** | Ajayi Oyebanke Abiodun | 2024/C/CYB/0928 | oyebanke.ajayi@miva.edu.ng |
 | **6** | Abdulsalam Usman | 2024/A/CYB/0138 | usman.abdulsalam@miva.edu.ng |
 | **7** | Oluwadurotimi Bajomo | 2024/C/CYB/0973 | oluwadurotimi.bajomo@miva.edu.ng |
 | **8** | Babatunde Kelvin Ifeoluwa | 2023/A/CYB/0055 | kelvin.babatunde@miva.edu.ng |
-| **9** | Ikechukwu Francis Nwadialo | 2023/B/CYB/0213 | frankfort4u2020@gmail.com |
+| **9** | Ikechukwu Francis Nwadialo | 2023/B/CYB/0213 | ikechukwu.nwadialo@miva.edu.ng |
 | **10** | Joseph Oluwatimilehin Ambali | 2023/B/CYB/0113 | joseph.ambali@miva.edu.ng |
 | **11** | Onuawuchi Christian Chinonso | 2023/B/CYB/0206 | christian.onuawuchi@miva.edu.ng |
 | **12** | Samuel Ezedi | 2023/B/CYB/0217 | Samuel.ezedi@miva.edu.ng |
