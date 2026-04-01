@@ -8,7 +8,7 @@ We ran a background capture to generate an evidentiary artifact while testing ev
 * `tcpdump -i eth0 -w evasion_capture.pcap`
     * `-i eth0`: Listens on the primary network interface.
     * `-w`: Writes the captured traffic to a binary file.
-* `nmap --mtu 24 -sS 192.168.100.x`
+* `nmap --mtu 24 -sS 192.168.100.224`
     * `--mtu 24`: Sets a custom Maximum Transmission Unit, chopping the scan packets into tiny 24-byte fragments to obscure the attack signature from packet inspectors.
     * `-sS`: TCP SYN scan.
 * `scapy` (Interactive Session)
